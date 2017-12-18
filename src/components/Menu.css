@@ -1,0 +1,15 @@
+.bg-light, .dropdown-menu{
+    background-color: rgb(252, 253, 253) !important; 
+}
+
+.dropdown-menu.show{
+    background-color: rgb(252, 253, 253) !important; 
+} 
+.navbar {
+    font-weight: bold !important;
+
+}
+
+.nav-link, .dropdown-item {
+    color: #007ebf !important;
+}

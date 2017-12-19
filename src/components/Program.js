@@ -6,8 +6,9 @@ class Program extends Component {
 
   render() {
     return (
-      <img className="program2017" src={program2017} alt={program2017}></img>
-
+      <div className='col-sm-12 sidebox'>
+        <img className="program2017" src={program2017} alt={program2017}></img>
+      </div>
     );
   }
 }

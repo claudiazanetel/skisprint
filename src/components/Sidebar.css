@@ -1,0 +1,19 @@
+.sidebox {
+  margin: 15px;
+  padding: 15px;
+  background-color: rgb(236, 252, 252);
+  text-align: center;
+}
+
+.program2017 {
+  width: 100%;
+}
+
+.mainSponsorDiv {
+  text-align: center;
+}
+
+.mainSponsor {
+  width: 60%;
+  padding: 3%;
+}

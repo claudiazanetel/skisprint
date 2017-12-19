@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Menu.css';
 
-import logo from '../assets/logos/skiSprint.jpg'
+import logo from '../assets/logos/skiSprint.jpg';
 
 class Menu extends Component {
   render() {
@@ -24,6 +24,8 @@ class Menu extends Component {
                                 <a className="dropdown-item" href="#">Regolamento</a>
                                 <a className="dropdown-item" href="#">Percorso</a>
                                 <a className="dropdown-item" href="#">Viabilità</a>
+                                <a className="dropdown-item" href="#">Lista Iscritti</a>
+                                <a className="dropdown-item" href="#">Classifiche</a>
                             </div>
                         </li>
                         <li className="nav-item">
@@ -31,6 +33,9 @@ class Menu extends Component {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">Staff</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Gallery</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">Albo d'Oro</a>

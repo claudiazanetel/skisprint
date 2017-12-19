@@ -9,6 +9,10 @@
   width: 100%;
 }
 
+.mainSponsorMobile {
+  display: none;
+}
+
 .mainSponsorDiv {
   text-align: center;
 }
@@ -16,4 +20,23 @@
 .mainSponsor {
   width: 60%;
   padding: 3%;
+}
+
+
+@media screen and (max-width: 600px) {
+  .sidebox {
+    margin:0;
+    padding:0;
+  }
+  .mainSponsorDesktop {
+    display: none;
+  }
+  .mainSponsorMobile{
+    display: inline-block;
+    text-align: center;
+  }
+  .mainSponsor {
+    width: 30%;
+    padding: 3%;
+  }
 }

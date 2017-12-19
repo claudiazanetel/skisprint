@@ -8,7 +8,7 @@ class Sidebar extends Component {
 
   render() {
     return (
-      <div className="col-md-4 d-none d-md-block">
+      <div className="col-md-4">
         <Program />
         <MainSponsor />
       </div>

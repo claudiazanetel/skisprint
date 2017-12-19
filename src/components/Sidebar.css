@@ -23,7 +23,7 @@
 }
 
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 600px) {
   .sidebox {
     margin:0;
     padding:0;

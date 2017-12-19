@@ -11,20 +11,20 @@ class MainSponsor extends Component {
     return (
       <div className="col-sm-12 sidebox">
         <div className="col-sm-12 mainSponsorDesktop">
-          <div className="col-md-12">
+          <div className="col-sm-12">
             <h4>Main Sponsor</h4>
           </div>
-          <div className="col-md-12">
+          <div className="col-sm-12">
             <a href="http://www.sanmartino.com/" target="_blank">
               <img  className="mainSponsor" src={apt} title="APT primiero" alt="APT primiero" />
             </a>
           </div>
-          <div className="col-md-12">
+          <div className="col-sm-12">
             <a href="http://www.trentino.to/" target="_blank">
               <img className="mainSponsor" src={trentino} title="Trentino" alt="Trentino" />
             </a>
           </div>
-          <div className="col-md-12">
+          <div className="col-sm-12">
             <a href="http://www.primieroenergia.com/" target="_blank"> 
               <img className="mainSponsor" src={primieroEnergia} title="Primiero Energia" alt="primiero energia" />
             </a>

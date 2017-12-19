@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './Menu.css';
 
 import logo from '../assets/logos/skiSprint.jpg';
-import headerImage from '../assets/headerImages/headerphoto.jpg';
+import headerImageDesktop from '../assets/headerImages/headerphoto.jpg';
+import headerImageMobile from '../assets/headerImages/headerphoto1.jpg';
 
 class Menu extends Component {
   render() {
@@ -52,7 +53,10 @@ class Menu extends Component {
                 <h2>26 DICEMBRE 2017</h2>
             </div>
             <div className="col-sm-12 headerImageDiv">
-                <img className="headerImage" src={headerImage} alt={headerImage}></img>
+                <img className="headerImageDesktop" src={headerImageDesktop} alt={headerImageDesktop}></img>
+            </div>
+            <div className="col-sm-12 headerImageDiv">
+                <img className="headerImageMobile" src={headerImageMobile} alt={headerImageMobile}></img>
             </div>
             <div className="col-sm-12 subtitle">
                 <h3>Campionato Italiano Assoluto Team Sprint e Ski Sprint Young</h3>

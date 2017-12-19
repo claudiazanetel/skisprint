@@ -8,6 +8,7 @@ h4 {
 }
 
 .sponsorbox {
+  margin-top: 3%;
   padding-top: 3%;
   background-color: rgb(236, 252, 252);
   text-align: center;
@@ -45,4 +46,34 @@ h4 {
     padding-left: 7px;
     padding-right: 14px;
   }
+
+  .sponsorRow {
+    padding-left: 7px;
+    padding-right: 14px;
+  }
+
+  .sponsor {
+    width: 120px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .patrocinioRow {
+    padding-left: 14px;
+  }
+
+  .sponsorRow {
+    padding-left: 14px;
+  }
+
+  .patrocinio {
+    width: 80px;
+  }
+
+  .sponsor {
+    width: 80px;
+  }
+
 }

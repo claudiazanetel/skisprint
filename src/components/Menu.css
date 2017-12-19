@@ -1,8 +1,8 @@
-.bg-light, .dropdown-menu{
+.bg-light, .dropdown-menu {
     background-color: rgb(252, 253, 253) !important; 
 }
 
-.dropdown-menu.show{
+.dropdown-menu.show {
     background-color: rgb(252, 253, 253) !important; 
 } 
 .navbar {
@@ -13,3 +13,68 @@
 .nav-link, .dropdown-item {
     color: #007ebf !important;
 }
+
+h1 {
+    font-weight: 900;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+
+
+.title {
+    padding-top: 2%;
+    padding-bottom: 1%;
+    background-color: #0070B4;
+}
+
+.subtitle {
+    padding-top: 2%;
+    padding-bottom: 1%;
+    background-color: #0070B4;
+}
+
+
+.title-mobile {
+    display:none;
+}
+
+.headerImageDiv {
+    padding:0;
+}
+
+.headerImage {
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .title {
+      display: none;
+    }
+    .title-mobile {
+        display: inline-block;
+        padding-top: 1%;
+        background-color: #0070B4;
+    }
+
+    h3 {
+        font-size: 0.75rem;
+    }
+  }

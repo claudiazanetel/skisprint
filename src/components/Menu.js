@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Menu.css';
 
 import logo from '../assets/logos/skiSprint.jpg';
+import headerImage from '../assets/headerImages/headerphoto.jpg';
 
 class Menu extends Component {
   render() {
@@ -43,6 +44,19 @@ class Menu extends Component {
                     </ul>
                 </div>
             </nav>
+            <div className="col-sm-12 title">
+                <h1 className="nameRace">SKI SPRINT 2017</h1>
+                <h2>martedì 26 DICEMBRE</h2>
+            </div>
+            <div className="col-sm-12 title-mobile">
+                <h2>26 DICEMBRE 2017</h2>
+            </div>
+            <div className="col-sm-12 headerImageDiv">
+                <img className="headerImage" src={headerImage} alt={headerImage}></img>
+            </div>
+            <div className="col-sm-12 subtitle">
+                <h3>Campionato Italiano Assoluto Team Sprint e Ski Sprint Young</h3>
+            </div>
         </div>
     );
   }

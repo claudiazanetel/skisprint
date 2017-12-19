@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Homepage.css";
-import Menu from "./Menu"
+import Menu from "./Menu";
+import Sidebar from "./Sidebar";
 
 class Homepage extends Component {
 
@@ -10,10 +11,14 @@ class Homepage extends Component {
 
   render() {
     return (
-        <div className="App">
-            <Menu />
-            <p>Homepage</p>
+      <div className="container">
+        <Menu />
+        <div className="row">
+          <div className="col-lg-8 col-md-9">
+          </div>
+          <Sidebar />
         </div>
+      </div>
     );
   }
 }

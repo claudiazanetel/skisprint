@@ -18,12 +18,12 @@
 }
 
 .mainSponsor {
-  width: 60%;
+  width: 70%;
   padding: 3%;
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 780px) {
   .sidebox {
     margin:0;
     padding:0;

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Homepage.css";
 import Menu from "./Menu";
 import Sidebar from "./Sidebar";
+import Sponsors from "./Sponsors";
 
 class Homepage extends Component {
 
@@ -17,6 +18,7 @@ class Homepage extends Component {
           <div className="col-md-8">
           </div>
           <Sidebar />
+          <Sponsors />
         </div>
       </div>
     );

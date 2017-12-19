@@ -4,5 +4,35 @@ h4 {
   color: #0070B4;
   text-align: center;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.5vw;
+}
+
+.sponsorbox {
+  padding-top: 3%;
+  background-color: rgb(236, 252, 252);
+  text-align: center;
+}
+
+.patrocinioDiv {
+  width: auto;
+  margin-bottom: 3%;
+}
+
+.patrocinio {
+  width: auto;
+}
+
+
+@media screen and (max-width: 767px) {
+  .sponsorbox {
+    margin-top: 3%;
+    padding: 0;
+    padding-top: 2%;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .patrocinioRow {
+    padding-left: 7px;
+  }
 }

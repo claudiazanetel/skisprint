@@ -18,8 +18,17 @@ h4 {
   margin-bottom: 3%;
 }
 
+.sponsorDiv {
+  margin-bottom: 3%;
+  width: auto;
+}
+
 .patrocinio {
   width: auto;
+}
+
+.sponsor {
+  width: 180px;
 }
 
 
@@ -34,5 +43,6 @@ h4 {
 
   .patrocinioRow {
     padding-left: 7px;
+    padding-right: 14px;
   }
 }

@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 
-import regione from '../assets/sponsor/patrocinio/regione.jpg';
-import pat from '../assets/sponsor/patrocinio/pat.jpg';
-import comunita from '../assets/sponsor/patrocinio/comunita.jpg';
-import primieroSMC from '../assets/sponsor/patrocinio/primieroSMC.png';
-import mezzano from '../assets/sponsor/patrocinio/mezzano.jpg';
-import imer from '../assets/sponsor/patrocinio/imer.jpg';
-import nuvola from '../assets/sponsor/patrocinio/nuvola.jpg';
-import vigilifuoco from '../assets/sponsor/patrocinio/vigilifuoco.jpg';
-import bimbrenta from '../assets/sponsor/patrocinio/bimbrenta.png';
+import poolPrimiero from '../assets/sponsor/pool.jpg';
+import salomon from '../assets/sponsor/salomon.jpg';
+import sportful from '../assets/sponsor/sportful.jpg';
+import artigiani from '../assets/sponsor/artigiani.jpg';
+import caseificio from '../assets/sponsor/caseificio.jpg';
+import casseruraliprimiero from '../assets/sponsor/casseruraliprimiero.jpg';
+import casserurali from '../assets/sponsor/casse_rurali_trentine.jpg';
+import coop from '../assets/sponsor/coop.jpg';
+import esco from '../assets/sponsor/esco.jpg';
 
 
 
@@ -19,35 +19,53 @@ class Sponsors extends Component {
       <div className="col-xs-12 sponsorbox">
         <div className="col-xs-12">
           <div className="col-xs-12">
-            <h4>con il patrocinio</h4>
+            <h4>Sponsors</h4>
           </div>
-          <div className="row patrocinioRow">
-            <div className="col-sm-4 col-xs-4 patrocinioDiv">
-              <img  className="patrocinio" src={regione} alt="regione" />
+          <div className="row sponsorRow">
+            <div className="col-sm-4 col-xs-4 sponsorDiv">
+              <a href="https://www.usprimiero.com/sponsor" target="_blank">
+                <img className="sponsor" src={poolPrimiero} title="US primiero" alt="US primiero" />
+              </a>
             </div>
-            <div className="col-sm-4 col-xs-4 patrocinioDiv">
-              <img className="patrocinio" src={pat} alt="pat" />
+            <div className="col-sm-4 col-xs-4 sponsorDiv">
+              <a href="http://www.salomon.com/" target="_blank">
+                <img className="sponsor" src={salomon} title="Salomon" alt="Salomon" />
+              </a>
             </div>
-            <div className="col-sm-4 col-xs-4 patrocinioDiv">
-              <img className="patrocinio" src={comunita} alt="comunita" />
+            <div className="col-sm-4 col-xs-4 sponsorDiv">
+              <a href="http://www.sportful.it" target="_blank">
+                <img className="sponsor" src={sportful} title="Sportful" alt="Sportful" />
+              </a>
             </div>
-            <div className=" col-sm-4 col-xs-4 patrocinioDiv">
-              <img className="patrocinio" src={primieroSMC} alt="primieroSMC" />
+            <div className=" col-sm-4 col-xs-4 sponsorDiv">
+              <a href="http://www.primart.it/" target="_blank">
+                <img className="sponsor" src={artigiani} title="Consorzio Artigiani Imprenditori Primiero" alt="Consorzio Artigiani Imprenditori Primiero" />
+              </a>
             </div>
-            <div className="col-sm-4 col-xs-4 patrocinioDiv">
-              <img className="patrocinio" src={imer} alt="imer" />
+            <div className="col-sm-4 col-xs-4 sponsorDiv">
+              <a href="http://www.caseificioprimiero.com/" target="_blank">
+                <img className="sponsor" src={caseificio} title="Caseificio Sociale" alt="Caseificio Sociale" />
+              </a>
             </div>
-            <div className="col-sm-4 col-xs-4 patrocinioDiv">
-              <img className="patrocinio" src={mezzano} alt="mezzano" />
+            <div className="col-sm-4 col-xs-4 sponsorDiv">
+              <a href="http://www.crdolomiti.it/" target="_blank">
+                <img className="sponsor" src={casseruraliprimiero} title="Cassa Rurale Dolomiti" alt="Cassa Rurale Dolomiti" />
+              </a>
             </div>
-            <div className="col-sm-4 col-xs-4 patrocinioDiv">
-              <img className="patrocinio" src={nuvola} alt="nuvola" />
+            <div className="col-sm-4 col-xs-4 sponsorDiv">
+              <a href="http://www.casserurali.it/" target="_blank">
+                <img className="sponsor" src={casserurali} title="Casse Rurali Trentine" alt="Casse Rurali Trentine" />
+              </a>
             </div>
-            <div className="col-sm-4 col-sm-4 col-xs-4 patrocinioDiv">
-              <img className="patrocinio" src={vigilifuoco} alt="vigilifuoco" />
+            <div className="col-sm-4 col-sm-4 col-xs-4 sponsorDiv">
+              <a href="http://www.saittn.it/fc/" target="_blank">
+                <img className="sponsor" src={coop} title="Famiglia Cooperativa" alt="Famiglia Cooperativa" />
+              </a>
             </div>
-            <div className="col-sm-4 col-xs-4 patrocinioDiv">
-              <img className="patrocinio" src={bimbrenta} alt="bimbrenta" />
+            <div className="col-sm-4 col-xs-4 sponsorDiv">
+              <a href="http://www.escoprimiero.it/" target="_blank">
+                <img className="sponsor" src={esco} title="Esco Primiero" alt="Esco Primiero" />
+              </a>
             </div>
           </div>
         </div>

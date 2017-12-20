@@ -9,3 +9,21 @@
 embed {
   margin-bottom: 5%;
 }
+
+li {
+  color: rgb(3, 101, 158);
+}
+
+.staff {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.albodoro {
+  color: #ae2445;
+}
+
+.albodoroCategory {
+  font-size: 1.0rem;
+  color: #ae2445;
+}

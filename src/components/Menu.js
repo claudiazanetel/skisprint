@@ -41,7 +41,7 @@ class Menu extends Component {
                     <Link className="nav-link" to="/gallery">Gallery</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/albo">Albo d'Oro</Link>
+                    <Link className="nav-link" to="/albodoro">Albo d'Oro</Link>
                   </li>
                 </ul>
               </div>

@@ -3,3 +3,7 @@ body {
   padding: 0;
   font-family: "Dejavu Sans";
 }
+
+p {
+  color: rgb(3, 101, 158);
+}

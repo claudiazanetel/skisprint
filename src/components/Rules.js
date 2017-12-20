@@ -44,10 +44,3 @@ class Rules extends Component {
 }
 
 export default Rules;
-
-
-/*   <h2><?=$word['down_reg_title']?></h2>
-  <p><a href="<?=$word['down_reg']?>"><img src="images/icons/pdf.jpg" width="100" height="105" alt="pdf"  /></a></p>
-  <h2><?=$word['down_reg_chi_title']?></h2>
-  <p><a href="<?=$word['down_reg_chi']?>"><img src="images/icons/pdf.jpg" width="100" height="105" alt="pdf"  /></a></p>              
- */

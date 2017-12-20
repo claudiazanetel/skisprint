@@ -6,7 +6,7 @@ import logo from '../assets/logos/logo.jpg';
 class Menu extends Component {
   render() {
     return (
-      <div className ="container">
+      <div>
         <div className="row nav">
           <div className="col-sm-12">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,7 +23,6 @@ class Menu extends Component {
                         La gara
                     </a>
                     <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a className="dropdown-item" href="#">Programma</a>
                       <a className="dropdown-item" href="#">Regolamento</a>
                       <a className="dropdown-item" href="#">Percorso</a>
                       <a className="dropdown-item" href="#">Viabilità</a>

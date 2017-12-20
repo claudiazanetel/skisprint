@@ -1,0 +1,106 @@
+
+.homepage {
+  padding-top: 3%;
+}
+
+h1 {
+  font-weight: bold;
+  color: rgb(3, 101, 158);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-weight: bold;
+  color: rgb(3, 101, 158);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2vw;
+}
+
+.sponsorbox {
+  margin-top: 3%;
+  padding-top: 3%;
+  background-color: rgb(236, 252, 252);
+  text-align: center;
+}
+
+.patrocinioDiv {
+  width: 30%;
+  margin-bottom: 3%;
+}
+
+.sponsorDiv {
+  margin-bottom: 3%;
+  width: 30%;
+}
+
+.patrocinio {
+  width: auto;
+}
+
+.sponsor {
+  width: 180px;
+}
+
+.time {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ae2445;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+.programm {
+  font-weight: bold;
+  text-align: center;
+  color: #007ebf;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+
+@media screen and (max-width: 767px) {
+  .sponsorbox {
+    margin-top: 3%;
+    padding: 0;
+    padding-top: 2%;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .patrocinioRow {
+    padding-left: 7px;
+    padding-right: 14px;
+  }
+
+  .sponsorRow {
+    padding-left: 7px;
+    padding-right: 14px;
+  }
+
+  .sponsor {
+    width: 120px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .patrocinioRow {
+    padding-left: 30px;
+  }
+
+  .sponsorRow {
+    padding-left: 30px;
+  }
+
+  .patrocinio {
+    width: 80px;
+  }
+
+  .sponsor {
+    width: 80px;
+  }
+
+}

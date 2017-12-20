@@ -1,0 +1,55 @@
+.sidebox {
+  margin: 15px;
+  padding: 15px;
+  background-color: rgb(236, 252, 252);
+  text-align: center;
+}
+
+h5 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2vw;
+  color: #ae2445;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+h6 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5vw;
+  color: #007ebf;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+
+.mainSponsorMobile {
+  display: none;
+}
+
+.mainSponsorDiv {
+  text-align: center;
+}
+
+.mainSponsor {
+  width: 90%;
+  padding: 3%;
+}
+
+
+@media screen and (max-width: 770px) {
+  .sidebox {
+    margin:0;
+    padding:0;
+  }
+  .mainSponsorDesktop {
+    display: none;
+  }
+  .mainSponsorMobile{
+    display: inline-block;
+    text-align: center;
+  }
+  .mainSponsor {
+    width: 30%;
+    padding: 3%;
+  }
+}

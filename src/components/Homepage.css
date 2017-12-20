@@ -1,6 +1,7 @@
 
-.homepage {
+.mainPage {
   padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 h1 {
@@ -16,7 +17,9 @@ h4 {
   color: rgb(3, 101, 158);
   text-align: center;
   text-transform: uppercase;
-  font-size: 2vw;
+  font-size: 1.2rem;
+  margin-top: 2%;
+
 }
 
 .sponsorbox {

@@ -1,30 +1,37 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import "./Homepage.css";
+import "./OtherPages.css";
 import Menu from "./Menu";
 import Sidebar from "./Sidebar";
 import Patrocinio from "./Patrocinio";
 import Sponsors from "./Sponsors";
 
+import regolamentoTeamSprint from '../files/regolamento2017.pdf';
+import regolamentoYoungSprint from '../files/regolamento.young2017.pdf';
+
 class Rules extends Component {
-
-  test() {
-    
-  }
-
   render() {
     return (
       <div className="container">
         <Menu />
         <div className="row">
-          <div className="col-md-8 rules">
-            <p>regolamento</p>
-            <div className="d-md-none">
-              <h1>PROGRAMMA</h1>
-              <p className="programm"><span className="time">14.00: </span>Qualifiche Ski Sprint Young</p>
-              <p className="programm"><span className="time">15.00: </span>Batterie Team Sprint</p>
-              <p className="programm"><span className="time">16.45: </span>Finali Ski Sprint Young</p>
-              <p className="programm"><span className="time">17.30: </span>Finali Team Sprint</p>
+          <div className="col-md-8 mainPage">
+            <h1>REGOLAMENTI 2017</h1>
+            <div className="row rules">
+              <div className="col-sm-6">
+                <h4>Download</h4>
+                <a href={regolamentoTeamSprint} download="regolamentoTeamSprint2017">Regolamento Team Sprint 2017</a><br></br>
+                <a href={regolamentoYoungSprint} download="regolamentoYoungSprint2017">Regolamento Ski Sprint Young 2017</a><br></br>
+              </div>
+              <div className="col-sm-6">
+                <h4>Contatti</h4>
+                <a href="http://www.usprimiero.com" target="_blank">usprimiero.com</a><br></br>
+                <a href="mailto:info@usprimiero.com?subject=Info-Skisprint">email</a>
+              </div>
+              <div className="col-sm-12 pdf d-none d-md-block">
+                <embed src={regolamentoTeamSprint} width="80%" height="375"/>
+                <embed src={regolamentoYoungSprint} width="80%" height="375"/>
+              </div>
             </div>
           </div>
           <Sidebar />
@@ -37,3 +44,10 @@ class Rules extends Component {
 }
 
 export default Rules;
+
+
+/*   <h2><?=$word['down_reg_title']?></h2>
+  <p><a href="<?=$word['down_reg']?>"><img src="images/icons/pdf.jpg" width="100" height="105" alt="pdf"  /></a></p>
+  <h2><?=$word['down_reg_chi_title']?></h2>
+  <p><a href="<?=$word['down_reg_chi']?>"><img src="images/icons/pdf.jpg" width="100" height="105" alt="pdf"  /></a></p>              
+ */

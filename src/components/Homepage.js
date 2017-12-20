@@ -17,7 +17,7 @@ class Homepage extends Component {
       <div className="container">
         <Menu />
         <div className="row">
-          <div className="col-md-8 homepage">
+          <div className="col-md-8 mainPage">
             <div className="d-md-none">
               <h1>PROGRAMMA</h1>
               <p className="programm"><span className="time">14.00: </span>Qualifiche Ski Sprint Young</p>

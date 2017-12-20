@@ -8,7 +8,7 @@ h1 {
   color: rgb(3, 101, 158);
   text-align: center;
   text-transform: uppercase;
-  font-size: 4vw;
+  font-size: 1.4rem;
 }
 
 h4 {
@@ -47,7 +47,7 @@ h4 {
 .time {
   font-weight: bold;
   text-align: center;
-  font-size: 3vw;
+  font-size: 1.2rem;
   color: #ae2445;
   text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
@@ -55,7 +55,6 @@ h4 {
 .programm {
   font-weight: bold;
   text-align: center;
-  font-size: 2.5vw;
   color: #007ebf;
   text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }

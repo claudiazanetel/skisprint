@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Menu.css';
 
 import logo from '../assets/logos/logo.jpg';
@@ -10,9 +11,9 @@ class Menu extends Component {
         <div className="row nav">
           <div className="col-sm-12">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-              <a className="navbar-brand" href="#">
+              <Link className="navbar-brand" to="/">
                 <img className="logo" src={logo} alt={"logo"}></img>
-              </a>
+              </Link>
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
@@ -23,24 +24,24 @@ class Menu extends Component {
                         La gara
                     </a>
                     <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a className="dropdown-item" href="#">Regolamento</a>
-                      <a className="dropdown-item" href="#">Percorso</a>
-                      <a className="dropdown-item" href="#">Viabilità</a>
-                      <a className="dropdown-item" href="#">Lista Iscritti</a>
-                      <a className="dropdown-item" href="#">Classifiche</a>
+                      <Link className="dropdown-item" to="/regolamento">Regolamento</Link>
+                      <Link className="dropdown-item" to="/percorso">Percorso</Link>
+                      <Link className="dropdown-item" to="/viabilità">Viabilità</Link>
+                      <Link className="dropdown-item" to="/iscitti">Lista Iscritti</Link>
+                      <Link className="dropdown-item" to="/classifiche">Classifiche</Link>
                     </div>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">News</a>
+                    <Link className="nav-link" to="/news">News</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Staff</a>
+                    <Link className="nav-link" to="/staff">Staff</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Gallery</a>
+                    <Link className="nav-link" to="/gallery">Gallery</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Albo d'Oro</a>
+                    <Link className="nav-link" to="/albo">Albo d'Oro</Link>
                   </li>
                 </ul>
               </div>

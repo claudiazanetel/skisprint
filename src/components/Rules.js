@@ -6,7 +6,7 @@ import Sidebar from "./Sidebar";
 import Patrocinio from "./Patrocinio";
 import Sponsors from "./Sponsors";
 
-class Homepage extends Component {
+class Rules extends Component {
 
   test() {
     
@@ -17,7 +17,8 @@ class Homepage extends Component {
       <div className="container">
         <Menu />
         <div className="row">
-          <div className="col-md-8 homepage">
+          <div className="col-md-8 rules">
+            <p>regolamento</p>
             <div className="d-md-none">
               <h1>PROGRAMMA</h1>
               <p className="programm"><span className="time">14.00: </span>Qualifiche Ski Sprint Young</p>
@@ -35,4 +36,4 @@ class Homepage extends Component {
   }
 }
 
-export default Homepage;
+export default Rules;

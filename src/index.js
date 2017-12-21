@@ -9,6 +9,8 @@ import Course from './components/Course';
 import Logistics from './components/Logistics';
 import Staff from './components/Staff';
 import WallOfFame from './components/WallOfFame';
+import Iscritti from './components/Iscritti';
+import Results from './components/Results';
 
 import registerServiceWorker from './registerServiceWorker';
 
@@ -17,6 +19,8 @@ ReactDOM.render(
   <BrowserRouter>
     <div>
       <Switch>
+        <Route path="/classifiche" component={Results}/>
+        <Route path="/iscritti" component={Iscritti}/>
         <Route path="/albodoro" component={WallOfFame}/>
         <Route path="/staff" component={Staff}/>
         <Route path="/viabilità" component={Logistics}/>

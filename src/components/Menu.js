@@ -27,7 +27,7 @@ class Menu extends Component {
                       <Link className="dropdown-item" to="/regolamento">Regolamento</Link>
                       <Link className="dropdown-item" to="/percorso">Percorso</Link>
                       <Link className="dropdown-item" to="/viabilità">Viabilità</Link>
-                      <Link className="dropdown-item" to="/iscitti">Lista Iscritti</Link>
+                      <Link className="dropdown-item" to="/iscritti">Lista Iscritti</Link>
                       <Link className="dropdown-item" to="/classifiche">Classifiche</Link>
                     </div>
                   </li>

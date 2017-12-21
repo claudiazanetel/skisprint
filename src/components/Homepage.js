@@ -25,6 +25,16 @@ class Homepage extends Component {
               <p className="programm"><span className="time">16.45: </span>Finali Ski Sprint Young</p>
               <p className="programm"><span className="time">17.30: </span>Finali Team Sprint</p>
             </div>
+            <div className="">
+              <h4 className="titleHomepage">Highlights dell'edizione 2016</h4>
+              <video width="95%" controls>
+                <source src="https://www.broadcaster.it/video/mp4/20161226_skisprint_hl.mp4" type="video/mp4"/>
+              </video>
+              <h4 className="titleHomepage">Interviste 2016</h4>
+              <video width="95%" controls>
+                <source src="https://www.broadcaster.it/video/mp4/20161226_interviste_skisprint.mp4" type="video/mp4"/>
+              </video>
+            </div>
           </div>
           <Sidebar />
           <Patrocinio />

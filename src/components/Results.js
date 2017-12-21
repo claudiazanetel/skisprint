@@ -15,6 +15,7 @@ class Results extends Component {
     super(props);
     this.state = {
       years: [],
+      year:"",
       results: {},
       selectedYear: false
     };
@@ -30,10 +31,10 @@ class Results extends Component {
 
   retrieveResults (year, e) {
     if (e.target.className !== "collapsed") {
-      this.setState({results: {}, selectedYear: false});
+      this.setState({results: {}, selectedYear: false, year:""});
       axios.get(`http://192.168.33.10/api.php?endpoint=rankings&year=${year}`)
         .then(response => {
-          this.setState({results: response.data}, () => this.checkResults());
+          this.setState({results: response.data, year}, () => this.checkResults());
         });
     }
   }
@@ -71,7 +72,7 @@ class Results extends Component {
                       <div className="card-block">
                         {
                           this.state.selectedYear ?
-                            <YearResults results={this.state.results} />
+                            <YearResults results={this.state.results} year={this.state.year} />
                             : 
                             <div className="loading">
                               <img src={loading} width="100" />

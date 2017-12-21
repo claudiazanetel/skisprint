@@ -42,3 +42,15 @@ li {
 .loading{
   padding: 10%;
 }
+
+.card, .card-header{
+  background-color: rgb(236, 252, 252) !important;
+}
+
+.collapse, .collapsing {
+  background-color: white !important;
+}
+
+.downloadList {
+  margin-left: 4%;
+}

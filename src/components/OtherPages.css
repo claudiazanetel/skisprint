@@ -27,3 +27,18 @@ li {
   font-size: 1.0rem;
   color: #ae2445;
 }
+
+.rankingCategory {
+  font-size: 1.0rem;
+  color: #ae2445;
+  text-align: left;
+  margin-left: 4%;
+}
+
+.ranking {
+  text-align: left;
+}
+
+.loading{
+  padding: 10%;
+}

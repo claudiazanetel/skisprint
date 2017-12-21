@@ -12,7 +12,11 @@ import WallOfFame from './components/WallOfFame';
 import Iscritti from './components/Iscritti';
 import Results from './components/Results';
 
-import registerServiceWorker from './registerServiceWorker';
+import Promise from 'promise-polyfill';
+
+if (!window['Promise']) {
+  window['Promise'] = Promise;
+}
 
 
 ReactDOM.render(
@@ -32,5 +36,3 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById('root')
 );
-
-registerServiceWorker();

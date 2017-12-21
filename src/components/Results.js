@@ -1,51 +1,48 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import "./Homepage.css";
+import axios from 'axios';
+import "./OtherPages.css";
 import Menu from "./Menu";
 import Sidebar from "./Sidebar";
 import Patrocinio from "./Patrocinio";
 import Sponsors from "./Sponsors";
 import YearResults from "./YearResults";
 
+import loading from '../assets/loading.gif';
+
 class Results extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      years: []
+      years: [],
+      results: {},
+      selectedYear: false
     };
   }
 
   componentDidMount () {
     let years = this.state.years;
-    for (let i = 2003; i < (new Date()).getFullYear(); i++) { 
+    for (let i = ((new Date()).getFullYear() - 1); i >= 2003 ; i--) { 
       years.push(i);
       this.setState({years});
     }
   }
 
-  getEditions () {
-    this.state.years.map(year => {
-      console.log(year)
-      return(
-        <div className="card" key={year}>
-          <div className="card-header" role="tab" id={`heading${year}`}>
-            <h5 className="mb-0">
-              <a data-toggle="collapse" data-parent="#accordion" href={`#collapse${year}`} aria-expanded="true" aria-controls={`collapse${year}`}>
-                {year}
-              </a>
-            </h5>
-          </div>
-          <div id={`collapse${year}`} className="collapse show" role="tabpanel" aria-labelledby={`heading${year}`}>
-            <div className="card-block">
-              {year}
-            </div>
-          </div>
-        </div>
-      );
+  retrieveResults (year, e) {
+    if (e.target.className !== "collapsed") {
+      this.setState({results: {}, selectedYear: false});
+      axios.get(`http://192.168.33.10/api.php?endpoint=rankings&year=${year}`)
+        .then(response => {
+          this.setState({results: response.data}, () => this.checkResults());
+        });
     }
-    );
   }
 
+  checkResults () {
+    if (this.state.results.male.length > 0) {
+      this.setState({selectedYear: true});
+    }
+  }
   render() {
     return (
       <div className="container">
@@ -59,14 +56,28 @@ class Results extends Component {
                   <div className="card" key={year}>
                     <div className="card-header" role="tab" id={`heading${year}`}>
                       <h4 className="mb-0">
-                        <a data-toggle="collapse" data-parent="#accordion" href={`#collapse${year}`} aria-expanded="false" aria-controls={`collapse${year}`}>
-                          {index+1}° edizione {year}
+                        <a
+                          data-toggle="collapse"
+                          data-parent="#accordion"
+                          href={`#collapse${year}`}
+                          aria-expanded="false"
+                          aria-controls={`collapse${year}`}
+                          onClick= {(e) => this.retrieveResults(year, e)}>
+                          {this.state.years.length - index}° edizione {year}
                         </a>
                       </h4>
                     </div>
                     <div id={`collapse${year}`} className="collapse" role="tabpanel" aria-labelledby={`heading${year}`}>
                       <div className="card-block">
-                        {year}
+                        {
+                          this.state.selectedYear ?
+                            <YearResults results={this.state.results} />
+                            : 
+                            <div className="loading">
+                              <img src={loading} width="100" />
+                            </div>
+                        }
+
                       </div>
                     </div>
                   </div>

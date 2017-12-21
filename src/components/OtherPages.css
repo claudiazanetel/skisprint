@@ -78,6 +78,22 @@ li {
 
 }
 
+.carouselDiv {
+  width: 70% !important;
+  margin: auto !important;
+  margin-top: 5% !important;
+  margin-bottom: 5% !important;
+}
+
+.carousel-slide {
+  width: 80% !important;
+  text-align: center !important;
+}
+
+.carousel-item {
+  text-align: center !important;
+}
+
 
 
 

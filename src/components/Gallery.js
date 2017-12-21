@@ -43,8 +43,33 @@ class Gallery extends Component {
               })
             }
           </div>
-          <div className="d-md-none">
+          <div className="d-md-none carouselDiv">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <img class="d-block img-fluid" src={require(`../files/gallery/2016/manifesto2016.jpg`)} alt="2016"/>
+                </div>
+                {
+                  this.state.years.map(year => {
+                    return (
+                      <div class="carousel-item" key={year}>
+                        <span className="didascalia">{year}</span>
+                        <img class="d-block img-fluid" src={require(`../files/gallery/${year}/manifesto${year}.jpg`)} alt={year}/>
+                      </div>
+                    );
+                  })
+                }
 
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
           </div>
           <Sidebar />
           <Patrocinio />

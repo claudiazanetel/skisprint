@@ -8,6 +8,8 @@ import Patrocinio from "./Patrocinio";
 import Sponsors from "./Sponsors";
 import YearGallery from "./YearGallery";
 
+import loading from '../assets/loading.gif';
+
 class Gallery extends Component {
   constructor (props) {
     super(props);
@@ -15,7 +17,8 @@ class Gallery extends Component {
       years: [],
       year:"",
       selectedYear: false,
-      imagesOfYear: []
+      imagesOfYear: [],
+      isLoading: true
     };
     this.selectedGallery=this.selectedGallery.bind(this);
   }
@@ -29,15 +32,28 @@ class Gallery extends Component {
   }
 
   selectedGallery(boolean) {
+    if (boolean) {
+      this.setState({isLoading: false});
+    }
     this.setState({selectedYear: boolean});
   }
 
   openGalleryByYear (year) {
-    this.setState({year});
+    this.selectedGallery(true);
+    this.setState(
+      {year, isLoading: true},
+      () => this.retrieveImages(year));
+  }
+
+  retrieveImages (year) {
     axios.get(`/api.php?endpoint=gallery&year=${year}`)
       .then(response => {
-        this.setState({imagesOfYear: response.data.pictures}, this.selectedGallery(true));
+        this.setState({imagesOfYear: response.data.pictures}, () => this.endLoading());
       });
+  }
+
+  endLoading () {
+    this.setState({isLoading: false});
   }
 
   render() {
@@ -59,9 +75,16 @@ class Gallery extends Component {
                     );
                   })
                 }
-              </div> :
-              <div className="col-md-8 mainPage d-none d-md-block"> 
-                <YearGallery selectedGallery={this.selectedGallery} year={this.state.year} imagesOfYear={this.state.imagesOfYear}/>
+              </div> : <div className="col-md-8 mainPage d-none d-md-block">
+                {
+                  this.state.isLoading ? 
+                    <div className="loading">
+                      <img src={loading} width="100" />
+                    </div> : 
+                    <div> 
+                      <YearGallery selectedGallery={this.selectedGallery} year={this.state.year} imagesOfYear={this.state.imagesOfYear}/>
+                    </div>
+                }
               </div>
           }
 

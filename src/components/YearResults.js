@@ -18,19 +18,8 @@ class YearResults extends Component {
   }
 
   componentWillMount () {
-    try {
-      let rankingSenM = require(`../files/classifiche/${this.props.year}/class_sen_mas.pdf`);
-      this.setState({rankingSenM: rankingSenM});
-      let rankingSenF = require(`../files/classifiche/${this.props.year}/class_sen_fem.pdf`);
-      this.setState({rankingSenF: rankingSenF});
-      let rankingYouM = require(`../files/classifiche/${this.props.year}/class_you_mas.pdf`);
-      this.setState({rankingYouM: rankingYouM});
-      let rankingYouF = require(`../files/classifiche/${this.props.year}/class_you_fem.pdf`);
-      this.setState({rankingYouF: rankingYouF});
+    if (this.props.year > 2013) {
       this.setState({download: true});
-    }
-    catch (e) {
-      this.setState({download: false});
     }
   }
 
@@ -64,10 +53,10 @@ class YearResults extends Component {
         {this.state.download ?
           <div>
             <h4 className="rankingCategory">Download le classifiche complete</h4>
-            <a className="downloadList" href={`/files/class_sen_mas_2016.pdf`}>Team Sprint M</a><br></br>
-            <a className="downloadList" href={this.state.rankingSenF} download="classTeamSprintF">Team Sprint F</a><br></br>
-            <a className="downloadList" href={this.state.rankingYouM} download="classTeamYoungM">Young Sprint M</a><br></br>
-            <a className="downloadList" href={this.state.rankingYouF} download="classTeamYoungF">Young Sprint F</a><br></br>
+            <a className="downloadList" href={`/files/classifiche.pdf/${this.props.year}/class_sen_mas.pdf`} target="_blank">Team Sprint M</a><br></br>
+            <a className="downloadList" href={`/files/classifiche.pdf/${this.props.year}/class_sen_fem.pdf`} target="_blank">Team Sprint F</a><br></br>
+            <a className="downloadList" href={`/files/classifiche.pdf/${this.props.year}/class_you_mas.pdf`} target="_blank">Young Sprint M</a><br></br>
+            <a className="downloadList" href={`/files/classifiche.pdf/${this.props.year}/class_you_fem.pdf`} target="_blank">Young Sprint F</a><br></br>
           </div> : null
         }
 

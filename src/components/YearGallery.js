@@ -18,8 +18,8 @@ class YearGallery extends Component {
   render() {
 
     return (
-      <div className="">
-        <h1>{this.props.year}</h1>
+      <div className="galleryMobile">
+        <h4>{this.props.year}</h4>
         <p className="return" onClick={() => this.backInGallery()}>Ritorna alla gallery</p>
         {
           this.props.imagesOfYear.map(image => {

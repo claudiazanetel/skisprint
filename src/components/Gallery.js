@@ -87,36 +87,51 @@ class Gallery extends Component {
                 }
               </div>
           }
+          {
+            !this.state.selectedYear ?
+              <div className="d-md-none carouselDiv">
+                <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                  <div className="carousel-inner" role="listbox">
+                    <div className="carousel-item active" onClick={() => this.openGalleryByYear('2016')}>
+                      <span className="didascalia">2016</span>
+                      <img className="d-block img-fluid" src={require(`../files/gallery/2016/manifesto2016.jpg`)} alt="2016"/>
+                    </div>
+                    {
+                      this.state.years.map(year => {
+                        return (
+                          <div className="carousel-item" key={year} onClick={() => this.openGalleryByYear(year)}>
+                            <span className="didascalia">{year}</span>
+                            <img className="d-block img-fluid" src={require(`../files/gallery/${year}/manifesto${year}.jpg`)} alt={year}/>
+                          </div>
+                        );
+                      })
+                    }
 
-          <div className="d-md-none carouselDiv">
-            <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-              <div className="carousel-inner" role="listbox">
-                <div className="carousel-item active" onClick={() => this.openGalleryByYear('2016')}>
-                  <span className="didascalia">2016</span>
-                  <img className="d-block img-fluid" src={require(`../files/gallery/2016/manifesto2016.jpg`)} alt="2016"/>
+                  </div>
+                  <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Previous</span>
+                  </a>
+                  <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Next</span>
+                  </a>
                 </div>
+              </div> : 
+              <div className="d-md-none">
                 {
-                  this.state.years.map(year => {
-                    return (
-                      <div className="carousel-item" key={year} onClick={() => this.openGalleryByYear(year)}>
-                        <span className="didascalia">{year}</span>
-                        <img className="d-block img-fluid" src={require(`../files/gallery/${year}/manifesto${year}.jpg`)} alt={year}/>
-                      </div>
-                    );
-                  })
+                  this.state.isLoading ? 
+                    <div className="loading">
+                      <img src={loading} width="100" />
+                    </div> : 
+                    <div> 
+                      <YearGallery selectedGallery={this.selectedGallery} year={this.state.year} imagesOfYear={this.state.imagesOfYear}/>
+                    </div>
                 }
-
               </div>
-              <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="sr-only">Previous</span>
-              </a>
-              <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="sr-only">Next</span>
-              </a>
-            </div>
-          </div>
+          }
+
+
           <Sidebar />
           <Patrocinio />
           <Sponsors />

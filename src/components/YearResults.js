@@ -64,7 +64,7 @@ class YearResults extends Component {
         {this.state.download ?
           <div>
             <h4 className="rankingCategory">Download le classifiche complete</h4>
-            <a className="downloadList" href={this.state.rankingSenM} download="classTeamSprintM">Team Sprint M</a><br></br>
+            <a className="downloadList" href={`/files/class_sen_mas_2016.pdf`}>Team Sprint M</a><br></br>
             <a className="downloadList" href={this.state.rankingSenF} download="classTeamSprintF">Team Sprint F</a><br></br>
             <a className="downloadList" href={this.state.rankingYouM} download="classTeamYoungM">Young Sprint M</a><br></br>
             <a className="downloadList" href={this.state.rankingYouF} download="classTeamYoungF">Young Sprint F</a><br></br>

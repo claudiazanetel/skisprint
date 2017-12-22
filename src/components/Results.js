@@ -17,7 +17,7 @@ class Results extends Component {
       years: [],
       year:"",
       results: {},
-      selectedYear: false
+      isLoading: true
     };
   }
 
@@ -31,8 +31,8 @@ class Results extends Component {
 
   retrieveResults (year, e) {
     if (e.target.className !== "collapsed") {
-      this.setState({results: {}, selectedYear: false, year:""});
-      axios.get(`http://192.168.33.10/api.php?endpoint=rankings&year=${year}`)
+      this.setState({results: {}, isLoading: true, year:""});
+      axios.get(`/api.php?endpoint=rankings&year=${year}`)
         .then(response => {
           this.setState({results: response.data, year}, () => this.checkResults());
         });
@@ -41,7 +41,7 @@ class Results extends Component {
 
   checkResults () {
     if (this.state.results.male.length > 0) {
-      this.setState({selectedYear: true});
+      this.setState({isLoading: false});
     }
   }
   render() {
@@ -71,14 +71,12 @@ class Results extends Component {
                     <div id={`collapse${year}`} className="collapse" role="tabpanel" aria-labelledby={`heading${year}`}>
                       <div className="card-block">
                         {
-                          this.state.selectedYear ?
-                            <YearResults results={this.state.results} year={this.state.year} />
-                            : 
+                          this.state.isLoading ?
                             <div className="loading">
                               <img src={loading} width="100" />
-                            </div>
+                            </div>:
+                            <YearResults results={this.state.results} year={this.state.year} />
                         }
-
                       </div>
                     </div>
                   </div>

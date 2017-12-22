@@ -1,20 +1,21 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import "./OtherPages.css";
 import Menu from "./Menu";
 import Sidebar from "./Sidebar";
 import Patrocinio from "./Patrocinio";
 import Sponsors from "./Sponsors";
-
+import YearGallery from "./YearGallery";
 
 class Gallery extends Component {
   constructor (props) {
     super(props);
     this.state = {
       years: [],
-      year:""
+      year:"",
+      selectedYear: false
     };
+    this.selectedGallery=this.selectedGallery.bind(this);
   }
 
   componentDidMount () {
@@ -25,49 +26,66 @@ class Gallery extends Component {
     }
   }
 
+  selectedGallery(boolean) {
+    this.setState({selectedYear: boolean});
+  }
+
+  openGalleryByYear (year) {
+    this.selectedGallery(true);
+    this.setState({year});
+  }
+
   render() {
     return (
       <div className="container">
         <Menu />
         <div className="row">
-          <div className="col-md-8 mainPage d-none d-md-block">
-            <h1>GALLERY</h1>
-            {
-              this.state.years.map(year => {
-                return (
-                  <div className="manifestoDiv">
-                    <span className="didascalia">{year}</span>
-                    <img className="manifesto" src={require(`../files/gallery/${year}/manifesto${year}.jpg`)} />
-                  </div>
-                );
-              })
-            }
-          </div>
+          {
+            !this.state.selectedYear ?
+              <div className="col-md-8 mainPage d-none d-md-block">
+                <h1>GALLERY</h1>
+                {
+                  this.state.years.map(year => {
+                    return (
+                      <div className="manifestoDiv" key={year} onClick={() => this.openGalleryByYear(year)}>
+                        <span className="didascalia">{year}</span>
+                        <img className="manifesto" src={require(`../files/gallery/${year}/manifesto${year}.jpg`)} />
+                      </div>
+                    );
+                  })
+                }
+              </div> :
+              <div className="col-md-8 mainPage d-none d-md-block"> 
+                <YearGallery selectedGallery={this.selectedGallery} year={this.state.year}/>
+              </div>
+          }
+
           <div className="d-md-none carouselDiv">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                  <img class="d-block img-fluid" src={require(`../files/gallery/2016/manifesto2016.jpg`)} alt="2016"/>
+            <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+              <div className="carousel-inner" role="listbox">
+                <div className="carousel-item active" onClick={() => this.openGalleryByYear('2016')}>
+                  <span className="didascalia">2016</span>
+                  <img className="d-block img-fluid" src={require(`../files/gallery/2016/manifesto2016.jpg`)} alt="2016"/>
                 </div>
                 {
                   this.state.years.map(year => {
                     return (
-                      <div class="carousel-item" key={year}>
+                      <div className="carousel-item" key={year} onClick={() => this.openGalleryByYear(year)}>
                         <span className="didascalia">{year}</span>
-                        <img class="d-block img-fluid" src={require(`../files/gallery/${year}/manifesto${year}.jpg`)} alt={year}/>
+                        <img className="d-block img-fluid" src={require(`../files/gallery/${year}/manifesto${year}.jpg`)} alt={year}/>
                       </div>
                     );
                   })
                 }
 
               </div>
-              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+              <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="sr-only">Previous</span>
               </a>
-              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
+              <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="sr-only">Next</span>
               </a>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import "./OtherPages.css";
 import Menu from "./Menu";
 import Sidebar from "./Sidebar";
@@ -13,7 +14,8 @@ class Gallery extends Component {
     this.state = {
       years: [],
       year:"",
-      selectedYear: false
+      selectedYear: false,
+      imagesOfYear: []
     };
     this.selectedGallery=this.selectedGallery.bind(this);
   }
@@ -31,8 +33,11 @@ class Gallery extends Component {
   }
 
   openGalleryByYear (year) {
-    this.selectedGallery(true);
     this.setState({year});
+    axios.get(`/api.php?endpoint=gallery&year=${year}`)
+      .then(response => {
+        this.setState({imagesOfYear: response.data.pictures}, this.selectedGallery(true));
+      });
   }
 
   render() {
@@ -56,7 +61,7 @@ class Gallery extends Component {
                 }
               </div> :
               <div className="col-md-8 mainPage d-none d-md-block"> 
-                <YearGallery selectedGallery={this.selectedGallery} year={this.state.year}/>
+                <YearGallery selectedGallery={this.selectedGallery} year={this.state.year} imagesOfYear={this.state.imagesOfYear}/>
               </div>
           }
 

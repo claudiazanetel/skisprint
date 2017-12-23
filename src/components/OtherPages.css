@@ -112,6 +112,27 @@ li {
 
 }
 
+.newsPage {
+  text-align: justify;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.titlePost {
+  font-size: 1.0rem !important;
+  color: #ae2445 !important;
+}
+
+.datePost {
+  text-align: right;
+}
+
+.news {
+  background-color: rgb(236, 252, 252);
+  padding: 2%;
+  margin-bottom: 3%;
+}
+
 
 
 @media screen and (max-width: 767px) {

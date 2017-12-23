@@ -82,6 +82,15 @@ h3 {
   }
 
   h2 {
+    font-size: 1.2rem;
     text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 0.5px 0.5px #fff, -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff;
+  }
+
+  h2.titleBlue {
+    font-size: 1.4rem;
+  }
+  
+  h2.titleBlue.number {
+    font-size: 1.6rem;
   }
 }

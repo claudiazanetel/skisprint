@@ -33,7 +33,14 @@ class Staff extends Component {
             <p><strong>Impianti Suono Audio</strong>:  Gest snc Trento - <a href="http://www.gest-suonoluce.it" target="_blank">gest-suonoluce.it</a><br /></p>
             <p><strong>Logistica</strong>: Primiero Iniziative - <a href="http://www.primieroiniziative.it" target="_blank">primieroiniziative.it</a><br /></p>
             <p><strong>Sito Internet</strong>: Daniele Orler - Claudia Zanetel<br /><br /></p>
-            <p><strong>Un particolare ringraziamento per la collaborazione a tutti i volontari, al Corpo Consorziale Vigili del Fuoco Volontari di Primiero e al Gruppo NU.VOL.A Primiero Vanoi</strong></p>
+            <p><strong>Un particolare ringraziamento per la collaborazione a: </strong></p>
+            <ul>
+              <li>Enti ed Istituzioni</li>
+              <li>Sponsors</li>
+              <li>Volontari</li>
+              <li>Corpo Consorziale Vigili del Fuoco Volontari di Primiero</li>
+              <li>Gruppo NU.VOL.A Primiero Vanoi</li>
+            </ul>
           </div>
           <Sidebar />
           <Patrocinio />

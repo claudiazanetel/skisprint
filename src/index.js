@@ -12,6 +12,7 @@ import WallOfFame from './components/WallOfFame';
 import Iscritti from './components/Iscritti';
 import Results from './components/Results';
 import Gallery from './components/Gallery';
+import News from './components/News';
 
 import Promise from 'promise-polyfill';
 
@@ -24,6 +25,7 @@ ReactDOM.render(
   <BrowserRouter>
     <div>
       <Switch>
+        <Route path="/news" component={News}/>
         <Route path="/gallery" component={Gallery}/>
         <Route path="/classifiche" component={Results}/>
         <Route path="/iscritti" component={Iscritti}/>

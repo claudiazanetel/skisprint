@@ -13,6 +13,7 @@ import Iscritti from './components/Iscritti';
 import Results from './components/Results';
 import Gallery from './components/Gallery';
 import News from './components/News';
+import Footer from './components/Footer';
 
 import Promise from 'promise-polyfill';
 
@@ -36,6 +37,7 @@ ReactDOM.render(
         <Route path="/regolamento" component={Rules}/>
         <Route path="/" component={Homepage}/>
       </Switch>
+      <Footer />
     </div>
   </BrowserRouter>,
   document.getElementById('root')

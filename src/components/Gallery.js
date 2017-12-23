@@ -16,9 +16,11 @@ class Gallery extends Component {
     this.state = {
       years: [],
       year:"",
-      selectedYear: false,
+      isEditionsSelected: false,
       imagesOfYear: [],
-      isLoading: true
+      posters: [],
+      isLoading: true,
+      isLoadingPosters: false
     };
     this.selectedGallery=this.selectedGallery.bind(this);
   }
@@ -29,13 +31,18 @@ class Gallery extends Component {
       years.push(i);
       this.setState({years});
     }
+    axios.get(`/api.php?endpoint=posters`)
+      .then(response => {
+        console.log(response.data)
+        this.setState({posters: response.data}, () => this.endLoading());
+      });
   }
 
   selectedGallery(boolean) {
     if (boolean) {
       this.setState({isLoading: false});
     }
-    this.setState({selectedYear: boolean});
+    this.setState({isEditionsSelected: boolean});
   }
 
   openGalleryByYear (year) {
@@ -62,19 +69,29 @@ class Gallery extends Component {
         <Menu />
         <div className="row">
           {
-            !this.state.selectedYear ?
+            !this.state.isEditionsSelected ?
               <div className="col-md-8 mainPage d-none d-md-block">
                 <h1>GALLERY</h1>
-                {
-                  this.state.years.map(year => {
-                    return (
-                      <div className="manifestoDiv" key={year} onClick={() => this.openGalleryByYear(year)}>
-                        <span className="didascalia">{year}</span>
-                        <img className="manifesto" src={require(`../files/gallery/${year}/manifesto${year}.jpg`)} />
-                      </div>
-                    );
-                  })
-                }
+                <div>
+                  {this.state.isLoadingPosters ? 
+                    <div className="loading">
+                      <img src={loading} width="100" />
+                    </div> : 
+                    <div>
+                      {
+                        this.state.years.map(year => {
+                          return (
+                            <div className="manifestoDiv" key={year} onClick={() => this.openGalleryByYear(year)}>
+                              <span className="didascalia">{year}</span>
+                              <img className="manifesto" src={require(`../files/gallery/${year}/manifesto${year}.jpg`)} />
+                            </div>
+                          );
+                        })
+                      }
+                    </div>
+                  }
+                </div>
+
               </div> : <div className="col-md-8 mainPage d-none d-md-block">
                 {
                   this.state.isLoading ? 
@@ -88,25 +105,29 @@ class Gallery extends Component {
               </div>
           }
           {
-            !this.state.selectedYear ?
+            !this.state.isEditionsSelected ?
               <div className="d-md-none carouselDiv">
                 <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                   <div className="carousel-inner" role="listbox">
-                    <div className="carousel-item active" onClick={() => this.openGalleryByYear('2016')}>
-                      <span className="didascalia">2016</span>
-                      <img className="d-block img-fluid" src={require(`../files/gallery/2016/manifesto2016.jpg`)} alt="2016"/>
-                    </div>
                     {
-                      this.state.years.map(year => {
-                        return (
-                          <div className="carousel-item" key={year} onClick={() => this.openGalleryByYear(year)}>
-                            <span className="didascalia">{year}</span>
-                            <img className="d-block img-fluid" src={require(`../files/gallery/${year}/manifesto${year}.jpg`)} alt={year}/>
-                          </div>
-                        );
+                      this.state.years.map((year, index) => {
+                        if(index === 0) {
+                          return (
+                            <div className="carousel-item active" key={year} onClick={() => this.openGalleryByYear(year)}>
+                              <span className="didascalia">{year}</span>
+                              <img className="d-block img-fluid" src={require(`../files/gallery/${year}/manifesto${year}.jpg`)} alt={year}/>
+                            </div>
+                          );
+                        } else {
+                          return (
+                            <div className="carousel-item" key={year} onClick={() => this.openGalleryByYear(year)}>
+                              <span className="didascalia">{year}</span>
+                              <img className="d-block img-fluid" src={require(`../files/gallery/${year}/manifesto${year}.jpg`)} alt={year}/>
+                            </div>
+                          );
+                        }
                       })
                     }
-
                   </div>
                   <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>

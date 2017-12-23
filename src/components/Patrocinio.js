@@ -41,12 +41,6 @@ class Patrocinio extends Component {
               <img className="patrocinio" src={mezzano} alt="mezzano" />
             </div>
             <div className="col-sm-4 col-xs-4 patrocinioDiv">
-              <img className="patrocinio" src={nuvola} alt="nuvola" />
-            </div>
-            <div className="col-sm-4 col-sm-4 col-xs-4 patrocinioDiv">
-              <img className="patrocinio" src={vigilifuoco} alt="vigilifuoco" />
-            </div>
-            <div className="col-sm-4 col-xs-4 patrocinioDiv">
               <img className="patrocinio" src={bimbrenta} alt="bimbrenta" />
             </div>
           </div>

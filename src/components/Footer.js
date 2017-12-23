@@ -18,7 +18,7 @@ class Footer extends Component {
           <div className="col-sm-4 ml-auto contacts">
             <p className="titleFooter"><strong>LINK</strong></p>
             <a href="http://www.usprimiero.com" target="_blank">US Primiero</a><br></br>
-            <a href="http://www.usprimiero.com" target="_blank">Newspower</a><br></br>
+            <a href="http://www.newspower.it/" target="_blank">Ufficio stampa Newspower</a><br></br>
             <a href="http://www.sanmartino.com" target="_blank">APT San Martino</a><br></br>
             <a href="https://www.meteotrentino.it" target="_blank">Meteo Trentino</a><br></br>
           </div>

@@ -6,8 +6,6 @@ import comunita from '../assets/sponsor/patrocinio/comunita.jpg';
 import primieroSMC from '../assets/sponsor/patrocinio/primieroSMC.png';
 import mezzano from '../assets/sponsor/patrocinio/mezzano.jpg';
 import imer from '../assets/sponsor/patrocinio/imer.jpg';
-import nuvola from '../assets/sponsor/patrocinio/nuvola.jpg';
-import vigilifuoco from '../assets/sponsor/patrocinio/vigilifuoco.jpg';
 import bimbrenta from '../assets/sponsor/patrocinio/bimbrenta.png';
 
 

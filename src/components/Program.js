@@ -14,6 +14,7 @@ class Program extends Component {
         <h6 className="race">Finali Ski Sprint Young</h6>
         <h5 className="time">17.30</h5>
         <h6 className="race">Finali Team Sprint</h6>
+        <p><strong>La gara sarà trasmessa in differita su Rai Sport dalle ore 00.15 e con replica il 27 dicembre alle ore 21.30.</strong></p>
       </div>
     );
   }

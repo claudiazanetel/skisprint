@@ -9,17 +9,19 @@ class YearResults extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      rankingSenM: "",
-      rankingSenF: "",
-      rankingYouM: "",
-      rankingYouF: "",
-      download: false
+      download: false,
+      rankingEditionSenior: [],
+      rankingEditionYouth: []
     };
   }
 
   componentWillMount () {
-    if (this.props.year > 2013) {
+    if (this.props.year > 2008) {
       this.setState({download: true});
+      axios.get(`/api.php?endpoint=pdf_rankings&year=${this.props.year}`)
+        .then(response => {
+          this.setState({rankingEditionSenior: response.data.senior, rankingEditionYouth: response.data.youth });
+        });
     }
   }
 
@@ -53,14 +55,26 @@ class YearResults extends Component {
         {this.state.download ?
           <div>
             <h4 className="rankingCategory">Download le classifiche complete</h4>
-            <a className="downloadList" href={`/files/classifiche.pdf/${this.props.year}/class_sen_mas.pdf`} target="_blank">Team Sprint M</a><br></br>
-            <a className="downloadList" href={`/files/classifiche.pdf/${this.props.year}/class_sen_fem.pdf`} target="_blank">Team Sprint F</a><br></br>
-            <a className="downloadList" href={`/files/classifiche.pdf/${this.props.year}/class_you_mas.pdf`} target="_blank">Young Sprint M</a><br></br>
-            <a className="downloadList" href={`/files/classifiche.pdf/${this.props.year}/class_you_fem.pdf`} target="_blank">Young Sprint F</a><br></br>
+            {
+              this.state.rankingEditionSenior.map ( element => {
+                return (
+                  <div key={element.path}>
+                    <a className="downloadList" href={element.path} target="_blank">Team Sprint {element.gender}</a><br></br>
+                  </div>
+                );
+              })
+            }
+            {
+              this.state.rankingEditionYouth.map ( element => {
+                return (
+                  <div key={element.path}>
+                    <a className="downloadList" href={element.path} target="_blank">Young Sprint {element.gender}</a><br></br>
+                  </div>
+                );
+              })
+            }
           </div> : null
         }
-
-
       </div>
     );
   }

@@ -141,7 +141,7 @@ class Gallery extends Component {
                     </div>
                 }
               </div> : 
-              <div className="d-md-none">
+              <div className="d-md-none loadingMobile">
                 {
                   this.state.isLoading ? 
                     <div className="loading">

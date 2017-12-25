@@ -5,6 +5,14 @@
   text-align: center;
 }
 
+.mainSponsors {
+  background-color: white;
+}
+
+.singleSponsor {
+  margin-bottom: 15px;
+}
+
 h5 {
   font-weight: bold;
   text-align: center;

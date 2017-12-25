@@ -5,11 +5,11 @@ class Footer extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row">
+        <div className="row footer">
           <div className="col-sm-5 ml-auto contacts">
             <p className="titleFooter"><strong>CONTATTI</strong></p>
-            <p><strong>US PRIMIERO ASD</strong></p>
-            <p>Via Dante 6 - Fiera di Primiero <br></br>
+            <p className="pFooter"><strong>US PRIMIERO ASD</strong></p>
+            <p className="pFooter">Via Dante 6 - Fiera di Primiero <br></br>
             38054 Primiero San Martino di Castrozza (TN)
             </p>
             <a href="mailto:info@usprimiero.com?subject=Info-Skisprint">info@usprimiero.com</a><br></br>

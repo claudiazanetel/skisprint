@@ -12,9 +12,6 @@ class MainSponsor extends Component {
       <div className="col-sm-12 sidebox">
         <div className="col-sm-12 mainSponsorDesktop">
           <div className="col-sm-12">
-            <h4>Main Sponsor</h4>
-          </div>
-          <div className="col-sm-12">
             <a href="http://www.sanmartino.com/" target="_blank">
               <img  className="mainSponsor" src={apt} title="APT primiero" alt="APT primiero" />
             </a>

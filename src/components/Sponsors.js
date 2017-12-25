@@ -36,6 +36,16 @@ class Sponsors extends Component {
               <img className="sponsor" src={sportful} title="Sportful" alt="Sportful" />
             </a>
           </div>
+          <div className="col-sm-4 col-xs-4 sponsorDiv">
+            <a href="http://www.casserurali.it/" target="_blank">
+              <img className="sponsor" src={casserurali} title="Casse Rurali Trentine" alt="Casse Rurali Trentine" />
+            </a>
+          </div>
+          <div className="col-sm-4 col-xs-4 sponsorDiv">
+            <a href="http://www.crdolomiti.it/" target="_blank">
+              <img className="sponsor" src={casseruraliprimiero} title="Cassa Rurale Dolomiti" alt="Cassa Rurale Dolomiti" />
+            </a>
+          </div>
           <div className=" col-sm-4 col-xs-4 sponsorDiv">
             <a href="http://www.primart.it/" target="_blank">
               <img className="sponsor" src={artigiani} title="Consorzio Artigiani Imprenditori Primiero" alt="Consorzio Artigiani Imprenditori Primiero" />
@@ -44,16 +54,6 @@ class Sponsors extends Component {
           <div className="col-sm-4 col-xs-4 sponsorDiv">
             <a href="http://www.caseificioprimiero.com/" target="_blank">
               <img className="sponsor" src={caseificio} title="Caseificio Sociale" alt="Caseificio Sociale" />
-            </a>
-          </div>
-          <div className="col-sm-4 col-xs-4 sponsorDiv">
-            <a href="http://www.crdolomiti.it/" target="_blank">
-              <img className="sponsor" src={casseruraliprimiero} title="Cassa Rurale Dolomiti" alt="Cassa Rurale Dolomiti" />
-            </a>
-          </div>
-          <div className="col-sm-4 col-xs-4 sponsorDiv">
-            <a href="http://www.casserurali.it/" target="_blank">
-              <img className="sponsor" src={casserurali} title="Casse Rurali Trentine" alt="Casse Rurali Trentine" />
             </a>
           </div>
           <div className="col-sm-4 col-sm-4 col-xs-4 sponsorDiv">

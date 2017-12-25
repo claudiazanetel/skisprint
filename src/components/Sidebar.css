@@ -18,7 +18,6 @@ h5 {
   text-align: center;
   font-size: 2vw;
   color: #ae2445;
-  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
 
 h6 {
@@ -26,7 +25,6 @@ h6 {
   text-align: center;
   font-size: 1.5vw;
   color: #007ebf;
-  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
 
 

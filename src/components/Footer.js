@@ -4,9 +4,9 @@ import './Homepage.css';
 class Footer extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <div className="row">
-          <div className="col-sm-4 ml-auto contacts">
+          <div className="col-sm-5 ml-auto contacts">
             <p className="titleFooter"><strong>CONTATTI</strong></p>
             <p><strong>US PRIMIERO ASD</strong></p>
             <p>Via Dante 6 - Fiera di Primiero <br></br>
@@ -15,7 +15,7 @@ class Footer extends Component {
             <a href="mailto:info@usprimiero.com?subject=Info-Skisprint">info@usprimiero.com</a><br></br>
             <a href="mailto:scinordico@usprimiero.com?subject=Info-Skisprint">scinordico@usprimiero.com</a>
           </div>
-          <div className="col-sm-4 ml-auto contacts">
+          <div className="col-sm-5 ml-auto contacts">
             <p className="titleFooter"><strong>LINK</strong></p>
             <a href="http://www.usprimiero.com" target="_blank">US Primiero</a><br></br>
             <a href="http://www.newspower.it/" target="_blank">Ufficio stampa Newspower</a><br></br>

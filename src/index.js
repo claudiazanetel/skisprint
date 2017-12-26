@@ -21,21 +21,39 @@ if (!window['Promise']) {
   window['Promise'] = Promise;
 }
 
+var ReactGA = require('react-ga');
+ReactGA.initialize('UA-100691146-2');
+ 
+const logPageView = () => {
+  ReactGA.set({ page: window.location.pathname });
+  ReactGA.pageview(window.location.pathname);
+  return null;
+};
+
+const NoMatch = () => (
+  <div>
+    <h2>Whoops</h2>
+    <p>Sorry but {window.location.pathname} didn’t match any pages</p>
+  </div>
+);
+
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter onUpdate={logPageView}>
     <div>
+      <Route path="/" component={logPageView} />
       <Switch>
-        <Route path="/news" component={News}/>
-        <Route path="/gallery" component={Gallery}/>
-        <Route path="/classifiche" component={Results}/>
-        <Route path="/iscritti" component={Iscritti}/>
-        <Route path="/albodoro" component={WallOfFame}/>
-        <Route path="/staff" component={Staff}/>
-        <Route path="/viabilità" component={Logistics}/>
-        <Route path="/percorso" component={Course}/>
-        <Route path="/regolamento" component={Rules}/>
-        <Route path="/" component={Homepage}/>
+        <Route exact path="/news" component={News} />
+        <Route exact path="/gallery" component={Gallery} />
+        <Route exact path="/classifiche" component={Results} />
+        <Route exact path="/iscritti" component={Iscritti} />
+        <Route exact path="/albodoro" component={WallOfFame} />
+        <Route exact path="/staff" component={Staff} />
+        <Route exact path="/viabilità" component={Logistics} />
+        <Route exact path="/percorso" component={Course} />
+        <Route exact path="/regolamento" component={Rules} />
+        <Route exact path="/" component={Homepage} />
+        <Route component={NoMatch} />
       </Switch>
       <Footer />
     </div>

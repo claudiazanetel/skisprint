@@ -23,7 +23,7 @@ class Results extends Component {
 
   componentDidMount () {
     let years = this.state.years;
-    for (let i = ((new Date()).getFullYear() - 1); i >= 2003 ; i--) { 
+    for (let i = ((new Date()).getFullYear()); i >= 2003 ; i--) { 
       years.push(i);
       this.setState({years});
     }

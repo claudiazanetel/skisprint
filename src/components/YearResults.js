@@ -16,7 +16,7 @@ class YearResults extends Component {
   }
 
   componentWillMount () {
-    if (this.props.year > 2008) {
+    if (this.props.year > 2008 && this.props.year !== 2017) {
       this.setState({download: true});
       axios.get(`/api.php?endpoint=pdf_rankings&year=${this.props.year}`)
         .then(response => {

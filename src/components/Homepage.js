@@ -27,14 +27,14 @@ class Homepage extends Component {
               <p><strong>La gara sarà trasmessa in differita su Rai Sport dalle ore 00.15 e con replica il 27 dicembre alle ore 21.30.</strong></p>
             </div>
             <div className="">
-              <h4 className="titleHomepage">Highlights dell'edizione 2016</h4>
+              <h4 className="titleHomepage">Highlights dell'edizione 2017</h4>
               <video width="95%" controls>
-                <source src="https://www.broadcaster.it/video/mp4/20161226_skisprint_hl.mp4" type="video/mp4"/>
+                <source src="https://www.broadcaster.it/video/mp4/20171226_ski_sprint_primiero_hl.mp4" type="video/mp4"/>
               </video>
-              <h4 className="titleHomepage">Interviste 2016</h4>
+{/*               <h4 className="titleHomepage">Interviste 2016</h4>
               <video width="95%" controls>
                 <source src="https://www.broadcaster.it/video/mp4/20161226_interviste_skisprint.mp4" type="video/mp4"/>
-              </video>
+              </video> */}
             </div>
           </div>
           <Sidebar />

@@ -10,7 +10,12 @@
 }
 
 .singleSponsor {
-  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.singleSponsor img {
+  padding:10px;
+  border: 0.3px solid #007ebf;
 }
 
 h5 {
@@ -58,5 +63,10 @@ h6 {
   .mainSponsor {
     width: 30%;
     padding: 3%;
+  }
+
+  .mainSponsorMobile img {
+    border: 0.3px solid #007ebf;
+    margin: 3px;
   }
 }

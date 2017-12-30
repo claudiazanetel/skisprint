@@ -34,12 +34,22 @@ h4 {
 
 .patrocinioDiv {
   width: 30%;
-  margin-bottom: 3%;
+  padding-bottom: 15px;
+}
+
+.patrocinioDiv img {
+  padding:3px;
+  border: 0.3px solid #007ebf;
 }
 
 .sponsorDiv {
-  margin-bottom: 3%;
+  padding-bottom: 15px;
   width: 30%;
+}
+
+.sponsorDiv img {
+  padding:3px;
+  border: 0.3px solid #007ebf;
 }
 
 .patrocinio {

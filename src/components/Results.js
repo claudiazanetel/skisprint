@@ -17,13 +17,14 @@ class Results extends Component {
       years: [],
       year:"",
       results: {},
-      isLoading: true
+      isLoading: true,
+      errorMessage: ""
     };
   }
 
   componentDidMount () {
     let years = this.state.years;
-    for (let i = ((new Date()).getFullYear()); i >= 2003 ; i--) { 
+    for (let i = ((new Date()).getFullYear()) -1; i >= 2003 ; i--) { 
       years.push(i);
       this.setState({years});
     }
@@ -35,6 +36,11 @@ class Results extends Component {
       axios.get(`/api.php?endpoint=rankings&year=${year}`)
         .then(response => {
           this.setState({results: response.data, year}, () => this.checkResults());
+        })
+        .catch(error => {
+          if (error.response.status === 404) {
+            this.setState({errorMessage: "Classifiche non disponibili"});
+          }
         });
     }
   }
@@ -72,9 +78,13 @@ class Results extends Component {
                       <div className="card-block">
                         {
                           this.state.isLoading ?
-                            <div className="loading">
-                              <img src={loading} width="100" />
-                            </div>:
+                            this.state.errorMessage.length > 0 ? 
+                              <div className="loading">
+                                <p>{this.state.errorMessage}</p>
+                              </div> :
+                              <div className="loading">
+                                <img src={loading} width="100" />
+                              </div>:
                             <YearResults results={this.state.results} year={this.state.year} />
                         }
                       </div>

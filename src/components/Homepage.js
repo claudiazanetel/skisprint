@@ -24,7 +24,7 @@ class Homepage extends Component {
               <p className="programm"><span className="time">15.00: </span>Batterie Team Sprint</p>
               <p className="programm"><span className="time">16.45: </span>Finali Ski Sprint Young</p>
               <p className="programm"><span className="time">17.30: </span>Finali Team Sprint</p> */}
-              <p><strong>La gara sarà trasmessa in differita su Rai Sport dalle ore 00.15 e con replica il 27 dicembre alle ore 21.30.</strong></p>
+              {/* <p><strong>La gara sarà trasmessa in differita su Rai Sport dalle ore 00.15 e con replica il 27 dicembre alle ore 21.30.</strong></p> */}
             </div>
             <div className="">
               <div className="video">

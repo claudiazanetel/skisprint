@@ -27,14 +27,24 @@ class Homepage extends Component {
               <p><strong>La gara sarà trasmessa in differita su Rai Sport dalle ore 00.15 e con replica il 27 dicembre alle ore 21.30.</strong></p>
             </div>
             <div className="">
-              <h4 className="titleHomepage">Highlights dell'edizione 2017</h4>
-              <video width="95%" controls>
-                <source src="https://www.broadcaster.it/video/mp4/20171226_ski_sprint_primiero_hl.mp4" type="video/mp4"/>
-              </video>
-{/*               <h4 className="titleHomepage">Interviste 2016</h4>
-              <video width="95%" controls>
-                <source src="https://www.broadcaster.it/video/mp4/20161226_interviste_skisprint.mp4" type="video/mp4"/>
-              </video> */}
+              <div className="video">
+                <h4 className="titleHomepage">Highlights dell'edizione 2017</h4>
+                <video width="100%" controls>
+                  <source src="https://www.broadcaster.it/video/mp4/20171226_ski_sprint_primiero_hl.mp4" type="video/mp4"/>
+                </video>
+              </div>
+              <div className="video">
+                <h4 className="titleHomepage">Interviste 2017</h4>
+                <video width="100%" controls>
+                  <source src="https://www.broadcaster.it/video/mp4/20171226_ski_sprint_primiero_intv_sky.mp4" type="video/mp4"/>
+                </video>
+              </div>
+              <div className="video">
+                <h4 className="titleHomepage">Preparazione Skisprint 2017</h4>
+                <div className="fbVideo">
+                  <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fusprimieroscinordico%2Fvideos%2F783035788546466%2F&show_text=0&width=560" width="95%" height="250" scrolling="no" frameorder="0" allowtransparency="true" allowFullScreen="true"></iframe>
+                </div>
+              </div>
             </div>
           </div>
           <Sidebar />

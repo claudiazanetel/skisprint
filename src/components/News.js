@@ -32,6 +32,15 @@ class News extends Component {
         <div className="row">
           <div className="col-md-8 newsPage">
             <h1>NEWS</h1>
+            <div className="news">
+              <p className="datePost">27 dicembre 2017</p>
+              <h4><a className="titlePost" href="https://www.usprimiero.com/home/16457_tricolore-numero-sei-per-pellegrino-noeckler-stuerz-debertolis-ed-e-tripudio-fiamme-oro-a-fiera-di-primiero-tn.html" target="_blank">TRICOLORE NUMERO SEI PER PELLEGRINO-NOECKLER, STUERZ-DEBERTOLIS ED E’ TRIPUDIO FIAMME ORO A FIERA DI PRIMIERO (TN)</a></h4>
+              <p>Oggi 15.a Ski Sprint – Campionato Italiano Assoluto Team Sprint a Fiera di Primiero (TN)
+                Federico Pellegrino e Dietmar Noeckler conquistano il sesto titolo tricolore in sette anni
+                Giulia Stuerz – Ilaria Debertolis ed è ancora vittoria per le Fiamme Oro
+                Prossimo obiettivo per l’US Primiero la Primiero Dolomiti Marathon del 7 luglio
+                [<a href="https://www.usprimiero.com/home/16457_tricolore-numero-sei-per-pellegrino-noeckler-stuerz-debertolis-ed-e-tripudio-fiamme-oro-a-fiera-di-primiero-tn.html" target="_blank">Read more...</a>]</p>
+            </div>
             {
               this.state.posts.map(post => {
                 return (

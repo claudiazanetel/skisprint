@@ -28,6 +28,9 @@ class Homepage extends Component {
             </div>
             <div className="">
               <div className="video">
+                <h2 className="titleHomepage">EDIZIONE 2018<br></br> NON IN PROGRAMMA!</h2>
+              </div>
+              <div className="video">
                 <h4 className="titleHomepage">Highlights dell'edizione 2017</h4>
                 <video width="100%" controls>
                   <source src="https://www.broadcaster.it/video/mp4/20171226_ski_sprint_primiero_hl.mp4" type="video/mp4"/>
